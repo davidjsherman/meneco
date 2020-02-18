@@ -8,25 +8,24 @@
 # 	Then have repaired network
 # 	And it contains expected reactions
 
-import os
 from pathlib import Path  # noqa: F401
-from pyasp.term import *
-import tempfile
 
 import meneco
 
+
 def reaction_ids(prediction):
     return set([p.arg(0) for p in prediction if p.pred() == "xreaction"])
-    
+
+
 def test_run_meneco_toy():
-    toy = Path('.') / "toy"
+    toy = Path(".") / "toy"
 
     unprod, recon_targets, one_min, intersection, union, enum = meneco.run_meneco(
         str(toy / "draft.sbml"),
         str(toy / "seeds.sbml"),
         str(toy / "targets.sbml"),
         str(toy / "repair.sbml"),
-        False
+        False,
     )
 
     assert len(unprod) == 31
