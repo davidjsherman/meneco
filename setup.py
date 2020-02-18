@@ -33,5 +33,6 @@ setup(
     package_data={'meneco': ['encodings/*.lp']},
     # scripts          = ['meneco.py'],
     entry_points={'console_scripts': ['meneco = meneco.__main__:main_meneco']},
+    tests_requires=['pytest'],
     install_requires=['pyasp == 1.4.3']
 )
