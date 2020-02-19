@@ -32,4 +32,4 @@ jobs:
     - name: Sonarqube code quality
       uses: sonarsource/sonarcloud-github-action@master
       env:
-        SONAR_AUTH_TOKEN: ${{ secrets.SONAR_AUTH_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_AUTH_TOKEN }}
