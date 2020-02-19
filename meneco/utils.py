@@ -20,6 +20,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 def clean_up():
     if os.path.isfile("parser.out"):
         os.remove("parser.out")
@@ -38,8 +39,8 @@ def clean_up():
 def print_met(predictions):
     for p in predictions:
         if p.pred() == "xreaction":
-            logger.info(' ' + str(p.arg(0)))
+            logger.info(" " + str(p.arg(0)))
         if p.pred() == "unproducible_target":
-            logger.info(' ' + str(p.arg(0)))
+            logger.info(" " + str(p.arg(0)))
         if p.pred() == "target":
-            logger.info(' ' + str(p.arg(0)))
+            logger.info(" " + str(p.arg(0)))
