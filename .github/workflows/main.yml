@@ -38,7 +38,7 @@ jobs:
       with:
         entrypoint: sonar-scanner
         args:
-          -Dsonar.projectBaseDir=${{INPUT_PROJECTBASEDIR}}
-          -Dsonar.host.url=${{SONARCLOUD_URL}}
-          -Dsonar.login=${{SONAR_TOKEN}}
+          "-Dsonar.projectBaseDir=${{INPUT_PROJECTBASEDIR}}"
+          "-Dsonar.host.url=${{SONARCLOUD_URL}}"
+          "-Dsonar.login=${{SONAR_TOKEN}}"
 
