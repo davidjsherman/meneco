@@ -31,7 +31,7 @@ jobs:
 
     - name: Sonarqube code quality
       uses: sonarsource/sonarcloud-github-action@master
-      if: secrets.SONAR_AUTH_TOKEN != ""
+      if: secrets.SONAR_AUTH_TOKEN != ''
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_AUTH_TOKEN }}
         SONARCLOUD_URL: https://sonarqube.inria.fr/sonarqube
