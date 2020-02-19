@@ -37,4 +37,4 @@ jobs:
         SONARCLOUD_URL: https://sonarqube.inria.fr/sonarqube
       with:
         entrypoint: /bin/bash
-        args: -c "echo ${SONAR_TOKEN} > /tmp/foo ; ls -l /tmp/foo ; cat /tmp/foo"
+        args: -c "echo ${SONAR_TOKEN} > /tmp/foo ; ls -l /tmp/foo ; od -a /tmp/foo"
