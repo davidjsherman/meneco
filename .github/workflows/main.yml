@@ -34,4 +34,5 @@ jobs:
       if: env.SONAR_TOKEN != ''
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_AUTH_TOKEN }}
+        SONAR_AUTH_TOKEN: ${{ secrets.SONAR_AUTH_TOKEN }}
         SONARCLOUD_URL: https://sonarqube.inria.fr/sonarqube
