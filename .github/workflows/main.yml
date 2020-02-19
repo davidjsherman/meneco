@@ -37,4 +37,8 @@ jobs:
         SONAR_AUTH_TOKEN: ${{ secrets.SONAR_AUTH_TOKEN }}
         SONARCLOUD_URL: https://sonarqube.inria.fr/sonarqube
       with:
-        args: sonar-scanner -X -Dsonar.projectBaseDir=${INPUT_PROJECTBASEDIR} -Dsonar.host.url=${SONARCLOUD_URL}
+        entrypoint:
+          - sonar-scanner
+          - -X
+          - -Dsonar.projectBaseDir=${INPUT_PROJECTBASEDIR}
+          - -Dsonar.host.url=${SONARCLOUD_URL}
