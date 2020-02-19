@@ -38,4 +38,4 @@ jobs:
       with:
         args:
           -Dsonar.host.url=${SONARCLOUD_URL}
-          -Dsonar.login='${env.SONAR_TOKEN}'
+          -Dsonar.login="'${env.SONAR_TOKEN}'"
