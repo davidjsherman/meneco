@@ -36,5 +36,5 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_AUTH_TOKEN }}
         SONARCLOUD_URL: https://sonarqube.inria.fr/sonarqube
       with:
-        args: -Dsonar.login=${{SONAR_TOKEN}}
+        args: "-Dsonar.login=${{SONAR_TOKEN}}"
 
